@@ -33,16 +33,17 @@ def update_label():
                 speed_str.set("No signal!\n");
 
             else:
-                speed = float(temp[7]);
+                speed = float(temp[7])*1.15078;
+
                 # convert speed from knots to mph and write to STDOUT
-                sys.stdout.write(str(speed*1.15078)+"\n");
-                speed_str.set("{0:.2f}".format(speed*1.15078)+" mph");
+                sys.stdout.write(str(speed)+"\n");
+                speed_str.set("{0:.2f}".format(speed)+" mph");
 
             # update GUI
             root.update();
 
 
-speed_label=Label(root, textvariable=speed_str, font=("Helvetica", 50))
+speed_label=Label(root, textvariable=speed_str, font=("Helvetica", 100))
 speed_label.pack()
 start_button=Button(root, text="start", command=update_label)
 start_button.pack()
