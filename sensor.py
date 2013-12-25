@@ -10,7 +10,7 @@ ser = serial.Serial(port = sys.argv[1], baudrate = 4800);
 
 # keep reading from device
 while True:
-    for line in ser.readline():
-        sys.stdout.write(str(line));
+        line = str(ser.readline());
+        sys.stdout.write(line);
 
 ser.close();
