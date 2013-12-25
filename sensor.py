@@ -36,7 +36,7 @@ def update_label():
                 speed = float(temp[7]);
                 # convert speed from knots to mph and write to STDOUT
                 sys.stdout.write(str(speed*1.15078)+"\n");
-                speed_str.set(str(speed*1.15078)+" mph");
+                speed_str.set("{0:.2f}".format(speed*1.15078)+" mph");
 
             # update GUI
             root.update();
