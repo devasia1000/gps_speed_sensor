@@ -15,9 +15,9 @@ ser = serial.Serial(port = sys.argv[1], baudrate = 4800);
 # synchronize updates to our GUI
 speed_str = StringVar()
 
-# keep reading from device
 def update_label():
 
+    # keep reading from device
     while True:
 
         line = str(ser.readline());
